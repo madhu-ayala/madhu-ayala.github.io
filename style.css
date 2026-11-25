@@ -162,3 +162,43 @@ img.photo { border: none; padding: 0; object-position: center top; }
 .paper-video { margin-top: 22px; max-width: 720px; }
 .video-label { font-family: var(--font-ui); font-size: .85rem; color: var(--muted); margin: 0 0 8px; }
 .paper-video video { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; background: #f3f5f5; }
+
+/* ---------- Home: full-width band instead of a small card ---------- */
+.home { display: flex; flex-direction: column; min-height: 100vh; }
+.home main {
+  flex: 1 0 auto; display: flex; align-items: center;
+  background: var(--navy-tint); padding: 0;
+}
+.home main .container { width: 100%; }
+.home .hero { background: none; border-radius: 0; padding: 64px 0; gap: 56px; }
+.home .photo { flex: 0 0 240px; width: 240px; height: 290px; box-shadow: 0 1px 3px rgba(21,42,70,.18); }
+.home h1 { font-size: 2.4rem; }
+.home .intro { font-size: 1.08rem; border-top-color: #cfd8e3; }
+.home .site-footer { background: var(--white); }
+@media (max-width: 620px) {
+  .home .hero { padding: 32px 0; gap: 24px; }
+  .home .photo { width: 180px; height: 216px; flex-basis: auto; }
+  .home h1 { font-size: 1.8rem; }
+}
+
+/* ---------- Home: roomier text (25 Nov, round 2) ---------- */
+.home .container { max-width: 1040px; }
+.home .hero { gap: 64px; flex-wrap: nowrap; }
+.home .hero-text { flex: 1 1 auto; min-width: 0; }
+.home .subtitle { font-size: 1.25rem; margin-top: 4px; }
+.home .affiliation { font-size: 1.05rem; }
+.home .intro { font-size: 1.15rem; line-height: 1.8; margin-top: 22px; padding-top: 20px; }
+.home .intro p { margin-bottom: 16px; }
+.home .quick-links { margin-top: 18px; font-size: .98rem; }
+.home .photo { flex: 0 0 260px; width: 260px; height: 315px; }
+@media (max-width: 700px) {
+  .home .hero { flex-wrap: wrap; flex-direction: column-reverse; align-items: flex-start; gap: 28px; }
+  .home .photo { width: 200px; height: 240px; flex-basis: auto; }
+  .home .intro { font-size: 1.05rem; }
+}
+.home .nav { max-width: 1040px; }
+@media (max-width: 1000px) and (min-width: 701px) {
+  .home .hero { gap: 36px; padding: 40px 0; }
+  .home .photo { flex: 0 0 200px; width: 200px; height: 240px; }
+  .home .intro { font-size: 1.05rem; line-height: 1.75; }
+}
